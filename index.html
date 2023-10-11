@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="time.css">
+
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        background-image: url("girl.jpg");
+    }
+    .time
+    {
+        width:250px;
+        height:200px;
+        background-color: lightpink;
+        align-items: center;
+       padding:100px;
+       font-size: 50px;
+       color:darkblue;
+       border-radius: 100px;
+ 
+    }
+    
+</style>
+<body>
+    <div class="time">
+    <p id="demo">Time</p>
+    </div>
+    <script>
+        const d=new Date();
+        let time=d.toLocaleTimeString();
+        
+        function fun1()
+        {   const d=new Date();
+            let newTime=d.toLocaleTimeString();
+            
+            document.getElementById("demo").innerHTML=newTime;
+        
+        }
+        setInterval(fun1,1000);
+        setInterval(()=>{console.log("hello");},1000);
+       
+    </script>
+</body>
+</html>
